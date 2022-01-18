@@ -23,7 +23,9 @@ jobs:
         image: postgres
         # Provide the password for postgres
         env:
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: 1234
+          POSTGRES_PORT: 5432
+          POSTGRES_USER: admin
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
@@ -43,5 +45,6 @@ jobs:
     - name: download file
       run: aws s3 cp s3://josseed-bucket/restore.sql .
     - name: migrate database
-      run: psql postgres -U postgres -f -a restore.sql
+      run: PGPASSWORD=1234 psql -h postgres -U admin -f -a restore.sql
+
 
