@@ -54,5 +54,10 @@ jobs:
         sudo apt-get install --yes postgresql-client
     - name: migrate database
       run: PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental -a -f restore.sql
+    - name: delete database
+      run: |
+        PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental  -c 'DROP DATABASE dvdrental;'
+        rm restore.sql
+    
 
 
