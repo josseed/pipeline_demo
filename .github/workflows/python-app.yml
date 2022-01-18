@@ -53,6 +53,6 @@ jobs:
         sudo apt-get update
         sudo apt-get install --yes postgresql-client
     - name: migrate database
-      run: PGPASSWORD=1234 psql -h localhost -U admin -a -f restore.sql
+      run: PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental -a -f restore.sql
 
 
