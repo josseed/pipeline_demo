@@ -56,7 +56,7 @@ jobs:
       run: PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental -a -f restore.sql
     - name: cleaning database
       run: |
-        PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental  -c 'DROP DATABASE dvdrental;'
+        PGPASSWORD=1234 psql -h localhost -U admin -d dvdrental -c 'DROP DATABASE dvdrental;'
         rm restore.sql
     
 
