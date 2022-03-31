@@ -58,10 +58,13 @@ jobs:
       run: |
         PGPASSWORD=1234 psql -h localhost -U admin -d postgres -c 'DROP DATABASE dvdrental;'
         rm restore.sql
-    - name: deploying to swaggerhub
-      uses: actions/setup-node@v3
-      with:
-        node-version: '14'
+  deploy_swaggerhub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
       run: | 
         npm i -g swaggerhub-cli
         swaggerhub api:create josseed/api_service/1.0 --published=publish --setdefault --file openapi.json
