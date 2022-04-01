@@ -72,7 +72,7 @@ jobs:
       run: | 
         echo $SWAGGERHUB_API_KEY
         npm i -g swaggerhub-cli
-        swaggerhub api:create josseed/doctor_service/1.0 --published=publish --setdefault --file openapi.json
+        swaggerhub api:create testing_swagger_2/api_service/1.0 --published=publish --setdefault --file openapi.json
     
 
 
