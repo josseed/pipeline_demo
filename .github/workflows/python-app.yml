@@ -67,6 +67,8 @@ jobs:
       with:
         node-version: '14'
     - name: deploy to swaggerhub
+     env:
+      SWAGGERHUB_API_KEY: ${{ secrets.SWAGGERHUB_API_KEY }}
       run: | 
         echo $SWAGGERHUB_API_KEY
         npm i -g swaggerhub-cli
