@@ -69,7 +69,7 @@ jobs:
     - name: deploy to swaggerhub
       run: | 
         npm i -g swaggerhub-cli
-         echo $SWAGGERHUB_API_KEY
+        echo $SWAGGERHUB_API_KEY
         swaggerhub api:create josseed/api_service/1.0 --published=publish --setdefault --file openapi.json
     
 
