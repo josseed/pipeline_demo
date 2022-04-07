@@ -17,7 +17,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#Login"
+                                "$ref": "#/components/schemas/Login"
                             }
                         }
                     },
@@ -29,7 +29,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#LoginResponse"
+                                    "$ref": "#/components/schemas/LoginResponse"
                                 }
                             }
                         }
@@ -39,7 +39,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -58,7 +58,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#CreateMultitestOrder"
+                                "$ref": "#/components/schemas/CreateMultitestOrder"
                             }
                         }
                     },
@@ -78,7 +78,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -123,7 +123,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -160,6 +160,7 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
+                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -241,7 +242,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#Page_TestResponseSchema_"
+                                    "$ref": "#/components/schemas/PageTestResponseSchema"
                                 }
                             }
                         }
@@ -251,7 +252,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -277,7 +278,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#TestSchema"
+                                "$ref": "#/components/schemas/TestSchema"
                             }
                         }
                     },
@@ -289,7 +290,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#CreatedResponse"
+                                    "$ref": "#/components/schemas/CreatedResponse"
                                 }
                             }
                         }
@@ -299,7 +300,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -340,7 +341,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#TestResponseSchema"
+                                    "$ref": "#/components/schemas/TestResponseSchema"
                                 }
                             }
                         }
@@ -350,7 +351,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -389,7 +390,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#DeletedResponse"
+                                    "$ref": "#/components/schemas/DeletedResponse"
                                 }
                             }
                         }
@@ -399,7 +400,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -436,7 +437,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#TestUpdateSchema"
+                                "$ref": "#/components/schemas/TestUpdateSchema"
                             }
                         }
                     },
@@ -448,7 +449,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#UpdatedResponse"
+                                    "$ref": "#/components/schemas/UpdatedResponse"
                                 }
                             }
                         }
@@ -458,7 +459,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -506,7 +507,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -543,6 +544,7 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
+                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -621,6 +623,7 @@
                         "required": false,
                         "schema": {
                             "title": "Test Order Id",
+                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "test_order_id",
@@ -630,6 +633,7 @@
                         "required": false,
                         "schema": {
                             "title": "Test Id",
+                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "test_id",
@@ -639,6 +643,7 @@
                         "required": false,
                         "schema": {
                             "title": "Lab Id",
+                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "lab_id",
@@ -648,6 +653,7 @@
                         "required": false,
                         "schema": {
                             "title": "Enterprise Id",
+                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "enterprise_id",
@@ -657,6 +663,7 @@
                         "required": false,
                         "schema": {
                             "title": "Patient Id",
+                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "patient_id",
@@ -679,7 +686,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#Page_GetTestOrderInformationSchema_"
+                                    "$ref": "#/components/schemas/Page_GetTestOrderInformationSchema_"
                                 }
                             }
                         }
@@ -689,7 +696,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -727,7 +734,7 @@
                     "content": {
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#Body_create_file_file_post"
+                                "$ref": "#/components/schemas/Body_create_file_file_post"
                             }
                         }
                     },
@@ -747,7 +754,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -792,7 +799,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -829,6 +836,7 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
+                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -910,7 +918,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#Page_FileBizUseSchema_"
+                                    "$ref": "#/components/schemas/Page_FileBizUseSchema_"
                                 }
                             }
                         }
@@ -920,7 +928,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -942,7 +950,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#FileBizUseSchema"
+                                "$ref": "#/components/schemas/FileBizUseSchema"
                             }
                         }
                     },
@@ -962,7 +970,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -1007,7 +1015,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -1040,7 +1048,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#FileBizUseSchema"
+                                "$ref": "#/components/schemas/FileBizUseSchema"
                             }
                         }
                     },
@@ -1060,7 +1068,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -1103,7 +1111,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#HTTPValidationError"
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
@@ -1132,7 +1140,7 @@
                                     "title": "Response Get Race List Valid Values Race Get",
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#RaceSchema"
+                                        "$ref": "#/components/schemas/RaceSchema"
                                     }
                                 }
                             }
@@ -1162,7 +1170,7 @@
                                     "title": "Response Get Ethnicity List Valid Values Ethnicity Get",
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#EthnicitySchema"
+                                        "$ref": "#/components/schemas/EthnicitySchema"
                                     }
                                 }
                             }
@@ -1192,7 +1200,7 @@
                                     "title": "Response Get Result Collected By List Valid Values Results Collected By Get",
                                     "type": "array",
                                     "items": {
-                                        "$ref": "#ResultCollectedBySchema"
+                                        "$ref": "#/components/schemas/ResultCollectedBySchema"
                                     }
                                 }
                             }
@@ -1267,6 +1275,7 @@
                     },
                     "patient_id": {
                         "title": "Patient Id",
+                        "exclusiveMinimum": 0.0,
                         "type": "integer",
                         "example": "3345"
                     },
@@ -1284,7 +1293,7 @@
                         "title": "Test Orders",
                         "type": "array",
                         "items": {
-                            "$ref": "#TestOrder"
+                            "$ref": "#/components/schemas/TestOrder"
                         }
                     },
                     "draft": {
@@ -1404,7 +1413,7 @@
                         "title": "Detail",
                         "type": "array",
                         "items": {
-                            "$ref": "#ValidationError"
+                            "$ref": "#/components/schemas/ValidationError"
                         }
                     }
                 }
@@ -1545,7 +1554,7 @@
                     }
                 }
             },
-            "Page_TestResponseSchema_": {
+            "PageTestResponseSchema": {
                 "title": "Page[TestResponseSchema]",
                 "type": "object",
                 "properties": {
