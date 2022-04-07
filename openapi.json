@@ -686,7 +686,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Page_GetTestOrderInformationSchema_"
+                                    "$ref": "#/components/schemas/PageGetTestOrderInformationSchema"
                                 }
                             }
                         }
@@ -734,7 +734,7 @@
                     "content": {
                         "multipart/form-data": {
                             "schema": {
-                                "$ref": "#/components/schemas/Body_create_file_file_post"
+                                "$ref": "#/components/schemas/BodyCreateFileFilePost"
                             }
                         }
                     },
@@ -1217,8 +1217,8 @@
     },
     "components": {
         "schemas": {
-            "Body_create_file_file_post": {
-                "title": "Body_create_file_file_post",
+            "BodyCreateFileFilePost": {
+                "title": "BodyCreateFileFilePost",
                 "required": [
                     "file"
                 ],
@@ -1509,7 +1509,7 @@
                     }
                 }
             },
-            "Page_GetTestOrderInformationSchema_": {
+            "PageGetTestOrderInformationSchema": {
                 "title": "Page[GetTestOrderInformationSchema]",
                 "type": "object",
                 "properties": {
