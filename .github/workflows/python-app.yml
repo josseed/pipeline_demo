@@ -71,7 +71,8 @@ jobs:
         SWAGGERHUB_API_KEY: ${{ secrets.SWAGGERHUB_API_KEY }}
       run: | 
         npm i -g swaggerhub-cli
-        swaggerhub api:create testing_swagger_2/api_service/1.4 --setdefault --file openapi.json
+        swaggerhub api:create testing_swagger_2/api_service/1.5 --setdefault --file openapi.json
+        swaggerhub api:create testing_swagger_2/api_service_2/1.0 --setdefault --file openapi-2.json
     
 
 

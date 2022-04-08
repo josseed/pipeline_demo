@@ -1,0 +1,124 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "API Service",
+        "description": "API Service",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/auth/login-portal": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Login",
+                "operationId": "login_auth_login_post_2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Login"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoginResponse"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "title": "HTTPValidationError",
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "title": "Detail",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        }
+                    }
+                }
+            },
+            "Login": {
+                "title": "Login",
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "title": "Email",
+                        "maxLength": 254,
+                        "minLength": 1,
+                        "type": "string",
+                        "example": "email@example.com"
+                    },
+                    "password": {
+                        "title": "Password",
+                        "minLength": 8,
+                        "type": "string",
+                        "example": "A1b2C3d4E5f"
+                    }
+                }
+            },
+            "LoginResponse": {
+                "title": "LoginResponse",
+                "required": [
+                    "status",
+                    "message",
+                    "auth_token"
+                ],
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "title": "Status",
+                        "type": "string"
+                    },
+                    "message": {
+                        "title": "Message",
+                        "type": "string"
+                    },
+                    "auth_token": {
+                        "title": "Auth Token",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "AuthorizedUser": {
+                "type": "http",
+                "scheme": "bearer"
+            },
+            "OneHealthAdmin": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
