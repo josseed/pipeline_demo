@@ -160,7 +160,6 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
-                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -544,7 +543,6 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
-                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -623,7 +621,6 @@
                         "required": false,
                         "schema": {
                             "title": "Test Order Id",
-                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "test_order_id",
@@ -633,7 +630,6 @@
                         "required": false,
                         "schema": {
                             "title": "Test Id",
-                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "test_id",
@@ -643,7 +639,6 @@
                         "required": false,
                         "schema": {
                             "title": "Lab Id",
-                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "lab_id",
@@ -653,7 +648,6 @@
                         "required": false,
                         "schema": {
                             "title": "Enterprise Id",
-                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "enterprise_id",
@@ -663,7 +657,6 @@
                         "required": false,
                         "schema": {
                             "title": "Patient Id",
-                            "exclusiveMinimum": 0.0,
                             "type": "integer"
                         },
                         "name": "patient_id",
@@ -836,7 +829,6 @@
                         "schema": {
                             "title": "Size",
                             "maximum": 100.0,
-                            "exclusiveMinimum": 0.0,
                             "type": "integer",
                             "default": 50
                         },
@@ -1275,7 +1267,6 @@
                     },
                     "patient_id": {
                         "title": "Patient Id",
-                        "exclusiveMinimum": 0.0,
                         "type": "integer",
                         "example": "3345"
                     },
