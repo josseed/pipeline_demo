@@ -3,8 +3,10 @@
     "info": {
         "title": "API Service",
         "description": "API Service",
-        "version": "0.1.0"
+        "version": "0.1.0",
+        "license": {"name": "Apache2", "url": "http://www.apache.org/licenses/LICENSE-2.0.html"}
     },
+    "servers": [{"url": "https://api/v1"}],
     "paths": {
         "/auth/login": {
             "post": {
@@ -1137,6 +1139,16 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -1167,6 +1179,16 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
                     }
                 },
                 "security": [
@@ -1194,6 +1216,16 @@
                                     "items": {
                                         "$ref": "#/components/schemas/ResultCollectedBySchema"
                                     }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
                                 }
                             }
                         }
